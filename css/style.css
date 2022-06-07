@@ -1,0 +1,663 @@
+@font-face {
+     font-family: "Cardinal";
+     src: url('../assets/webfonts/Cardinal.ttf');
+}
+
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* Base Styles
+/*******************************************/
+
+html {
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color: #5A4A42;
+     scroll-behavior: smooth;
+}
+
+#home,
+#about-us,
+#menu,
+#order-now,
+#testimonials {
+     font-size: 16px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#menu,
+#order-now,
+#testimonials {
+     flex-direction: column;
+}
+
+h1 {
+     font-size: 6em;
+     font-family: 'Cardinal', 'Times New Roman', Times, serif;
+     line-height: 1.2em;
+}
+
+h2 {
+     margin: 25px 0;
+     font-size: 3.5em;
+     font-family: 'Cardinal', 'Times New Roman', Times, serif;
+}
+
+h3 { 
+     font-size: 1.8em;
+}
+
+h4 {
+     font-size: 1.3em;
+}
+
+a {
+     text-decoration: none;
+}
+
+.full-page {
+     width: 100vw;
+     height: 100vh;
+}
+
+.full-page-2x {
+     width: 100vw;
+     height: 150vh;
+}
+
+/* Ul Flex */
+
+.ul-flex {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+}
+
+     .ul-flex span {
+          color: #5A4A42;
+     }
+
+     .ul-flex a {
+          color: #5A4A42;
+     }
+
+     .ul-flex li:hover a,
+     .ul-flex li:hover i {
+          color: orange;
+     }
+
+nav .ul-flex {
+     justify-content: flex-end;
+}
+
+     nav .ul-flex li,
+     #home .ul-flex li {
+          margin-right: 50px;
+     }
+
+     nav .ul-flex li {
+          cursor: pointer;
+     }
+
+#home .ul-flex span {
+     margin-left: 10px;
+}
+
+     #home .ul-flex i {
+          color: orange;
+     }
+
+/* Flex Column */
+
+.flex-column {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+/* Hero */
+
+.hero {
+     width: 700px;
+}
+
+     .hero p {
+          line-height: 1.5em;
+     }
+
+/* Section Label */
+
+.section-label {
+     font-size: 1.2em;
+     color: orange;
+}
+
+/* Button Special */
+
+.button-special {
+     width: 180px;
+     height: 50px;
+     display: flex;
+     margin-top: 25px;
+     border-radius: 5px;
+     background-color: orange;
+}
+
+     .button-special li:first-child {
+          height: 100%;
+          width: 80%;
+     }
+
+     .button-special li:last-child {
+          width: 20%;
+          height: 100%;
+          background-color: rgb(255, 183, 50);
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+     }
+
+          .button-special a {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 100%;
+               height: 100%;
+               color: white;
+          }
+
+/* Scroll Circles */
+
+.scroll-circles {
+     width: 200px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 50px;
+     color: orange
+}
+     .scroll-circles .fa-circle{
+          font-size: 0.5em;
+          cursor: pointer;
+     }
+
+#menu .scroll-circles {
+     margin-top: 25px;
+}
+
+/* Slideshow */
+
+.slideshow {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     margin-top: 50px;
+}
+
+     .slideshow img {
+          width: 800px;
+          margin: 0 50px;
+     }
+
+     .slideshow a {
+          font-size: 2.5em;
+          color: #5A4A42;
+     }
+
+/* Header */
+
+header {
+     display: flex;
+     align-items: center;
+     position: fixed;
+     width: 100vw;
+     height: 150px;
+     padding-left: 100px;
+     padding-left: 50px;
+     z-index: 10;
+     
+}
+
+     nav {
+          width: 100%;
+          transition: 0.5s;
+     }
+
+          .logo {
+               position: absolute;
+          }
+
+               .logo img {
+                    width: 110px;
+                    transition: 0.5s;
+               }
+
+     nav a {
+          font-size: 1.1em;
+     }
+
+     #collapsed-nav-icon {
+          display: none;
+     }
+
+     #collapsed-nav {
+          position: fixed;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-end;
+          height: 100vh;
+          right: -400px;
+          padding: 25px 125px 25px 50px;
+          background-color: rgba(255,255,255,0.7);
+          backdrop-filter: blur(5px);
+          transition: 0.5s;
+          z-index: 10;
+     }
+
+          #collapsed-nav li {
+               margin-right: 0;
+               padding-bottom: 25px;
+               margin-bottom: 25px;
+               border-bottom: 1px solid rgba(90,74,66,0.5);
+          }
+
+               #collapsed-nav a {
+                    color: #5A4A42;
+               }
+
+               #collapsed-nav a:hover {
+                    color: orange;
+               }
+
+               .collapsed-logo {
+                    display: none;
+               }
+
+/* Home */
+
+#home {
+     justify-content: flex-start;
+     padding-left: 10vw;
+     background-image: url('../assets/images/home.jpg');
+     background-size: cover;
+     background-position: center;
+}
+     
+     .search-bar {
+          margin: 25px 0;
+          -webkit-box-shadow: 0px 0px 75px -10px rgba(0,0,0,0.2);
+          -moz-box-shadow: 0px 0px 75px -10px rgba(0,0,0,0.2);
+          box-shadow: 0px 0px 75px -10px rgba(0,0,0,0.2);
+     }
+          .search-bar input {
+               border: none;
+               padding: 20px;
+               font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               font-size: 1em;
+          }
+          .search-bar input:focus {
+               outline: none;
+          }
+
+          .search-bar input:first-child{
+               width: 80%;
+          }
+          .search-bar input:last-child{
+               width: 20%;
+               background-color: orange;
+               color: white;
+               cursor: pointer;
+          }
+
+/* About us */
+
+#about-us {
+     background-image: url('../assets/images/about.jpg');
+     background-size: cover;
+     background-position: 50% 40%;
+     height: 80vh;
+     padding: 0 15px;
+}
+
+/* Menu */
+
+#menu {
+     background-color: #eff4f8;
+     padding: 100px 15px;
+     text-align: center;
+}
+     .menu-list {
+          margin: 50px 0;
+          width: 700px;
+          height: 50px;
+          font-size: 1.2em;
+     }
+
+          .menu-list li {
+               display: inline-block;
+               height: 100%;
+               width: 20%;
+          }
+
+               .menu-list a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid rgba(0,0,0,0.3);
+                    color: #5A4A42;
+               }
+
+               .menu-list a:hover {
+                    border-bottom: 2px solid orange;
+                    color: orange;
+               }
+
+     .menu-items {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 1000px;
+          text-align: center;
+     }
+
+          .menu-items a {
+               position: relative;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 220px;
+               height: 300px;
+               margin: 0 15px;
+               color: white;
+               margin-bottom: 25px;
+          }
+
+               .menu-item-hover {
+                    position: absolute;
+                    display: none;
+                    background-color: rgba(0,0,0,0.5);
+               }
+
+                    .item-price {
+                         font-size: 1.2em;
+                    }
+
+               .menu-items a:hover .menu-item-hover {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    padding: 0 15px;
+                    width: 100%;
+                    height: 100%;
+               }
+          
+               .menu-items a div:last-child {
+                    width: 100%;
+                    height: 100%;
+               }
+
+                    #menu-item-1 {
+                         background-image: url('../assets/images/menu-items/spaghetti-alla-carbonara.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-2 {
+                         background-image: url('../assets/images/menu-items/fiorentina-steak.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-3 {
+                         background-image: url('../assets/images/menu-items/risotto.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-4 {
+                         background-image: url('../assets/images/menu-items/polenta.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-5 {
+                         background-image: url('../assets/images/menu-items/napoletana-pizza.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-6 {
+                         background-image: url('../assets/images/menu-items/lasange.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-7 {
+                         background-image: url('../assets/images/menu-items/truffles.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+                    #menu-item-8 {
+                         background-image: url('../assets/images/menu-items/gelato.jpg');
+                         background-size: cover;
+                         background-position: center;
+                    }
+
+/* Order Now */
+
+#order-now {
+     padding: 100px 15px;
+     background-image: url('../assets/images/order-now.jpg');
+     background-size: cover;
+     background-position: center;
+}
+
+     #order-now div.flex-column {
+          height: 150px;
+          font-size: 1.5em;
+          margin: 25px 0;
+     }
+
+          #order-now div.flex-column a{
+               color: orange;
+          }
+
+     #order-now .ul-flex {
+          justify-content: space-between;
+          width: 500px;
+          font-size: 1.2em;
+     }
+
+/* Testimonials */
+
+#testimonials {
+     background-color: #eff4f8;
+     padding: 50px 0;
+}
+
+     .testimonial {
+          height: 300px;
+          width: 800px;
+          text-align: center;
+     }
+
+          .testimonial img {
+               width: 100px;
+               border-radius: 50%;
+          }
+
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+
+     header {
+          padding-right: 50px;
+     }
+
+     #collapsed-nav-icon {
+          display: block;
+     }
+
+     .noncollapsed-nav {
+          display: none
+     }
+
+     .hero {
+          width: 500px;
+     }
+
+     .menu-items {
+          width: 750px;
+     }
+
+     .slideshow img {
+          width: 500px;
+          margin: 0 4.1vw;
+     }
+}
+
+@media screen and (max-width: 900px) {
+
+     header {
+          padding: 0 25px;
+     }
+
+     #home {
+          padding-left: 5vw;
+     }
+
+     .menu-list {
+          width: 100%;
+          padding: 0 50px;
+     }
+
+     .menu-items {
+          width: 100%;
+     }
+
+          .menu-item-hover {
+               position: absolute;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-evenly;
+               align-items: center;
+               width: 100%;
+               height: 100%;
+          }
+     
+
+     .slideshow img {
+          width: 56vw;
+          margin: 0 4.1vw;
+     }
+
+     .testimonial {
+          height: 400px;
+          width: 100%;
+          padding: 25px;
+     }
+}
+
+@media screen and (max-width: 600px) {
+
+     .search-bar input {
+          padding: 10px;
+     }
+
+     .search-bar input:first-child{
+          width: 70%;
+     }
+     .search-bar input:last-child{
+          width: 30%;
+          background-color: orange;
+          color: white;
+          cursor: pointer;
+     }
+
+     .logo {
+          display: none
+     }
+
+     #collapsed-nav {
+          position: fixed;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-end;
+          height: 100vh;
+          right: -400px;
+          padding: 25px 125px 25px 50px;
+          z-index: 10;
+     }
+
+          .collapsed-logo {
+               display: block;
+          }
+
+               .collapsed-logo img {
+                    width: 75px;
+               }
+
+     #home {
+          padding-left: 0;
+          font-size: 14px;
+     }
+
+     .hero {
+          width: 100%;
+          padding: 0 25px;
+     }
+
+     #about-us {
+          height: 120vh;
+          font-size: 14px;
+     }
+
+     .menu-list {
+          height: 100%;
+     }
+
+          .menu-list li {
+               width: 75px;
+          }
+
+               .menu-list a {
+                    padding: 25px 0;
+               }
+
+     #order-now .ul-flex {
+          justify-content: space-between;
+          width: 100%;
+          font-size: 1.2em;
+     }
+
+     #testimonials {
+          text-align: center;
+          font-size: 14px;
+     }
+}
