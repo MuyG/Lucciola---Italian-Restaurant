@@ -43,7 +43,9 @@ function scrollFunction() {
     document.querySelector('header').style.height = "75px";
     document.querySelector('header').style.backgroundColor = "rgba(255,255,255,0.7)";
     document.querySelector('header').style.backdropFilter = "blur(5px)";
-    document.querySelector('nav').style.transform= "translateX(0)";
+    document.querySelector('nav').style.transform = "translateX(0)";
+    document.querySelector('nav').style.backgroundColor = "rgba(255,255,255,0)";
+    document.querySelector('nav').style.backdropFilter = "blur(0)";
     document.querySelector('.logo img').style.width = "50px";
     document.querySelector('#collapsed-nav').style.right = '-400px'
     collapsedNav.collapsed = true
@@ -51,7 +53,9 @@ function scrollFunction() {
     document.querySelector('header').style.height = "150px";
     document.querySelector('header').style.backgroundColor = "rgba(255,255,255,0)";
     document.querySelector('header').style.backdropFilter = "blur(0)";
-    document.querySelector('nav').style.transform= "translateX(0)";
+    document.querySelector('nav').style.transform = "translateX(0)";
+    document.querySelector('nav').style.backgroundColor = "rgba(255,255,255,0.8)";
+    document.querySelector('nav').style.backdropFilter = "blur(5px)";
     document.querySelector('.logo img').style.width = "110px";
     document.querySelector('#collapsed-nav').style.right = '-400px'
     collapsedNav.collapsed = true
